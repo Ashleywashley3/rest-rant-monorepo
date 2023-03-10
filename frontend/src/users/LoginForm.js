@@ -15,9 +15,10 @@ function LoginForm() {
 
     const [errorMessage, setErrorMessage] = useState(null)
 
+    //invoking the route handler and sending the username and password so that the backend can look it up
     async function handleSubmit(e) {
         e.preventDefault()
-        const response = await fetch('http://localhost:5000/authentication/', {
+        const response = await fetch('http://localhost:8080/authentication/', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
